@@ -31,11 +31,18 @@ function createNav(){
 }
 
 function createMain(){
+    const main = document.createElement('main');
+    main.classList.add('main');
 
+    return main;
 }
 
 export default function createWebsite(){
     const content = document.getElementById('content')
+    const header = createHeader();
+    const nav = createNav();
 
-    content.appendChild(createHeader());
+    header.appendChild(nav);
+    content.appendChild(header);
+    content.appendChild(createMain());
 }
