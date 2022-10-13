@@ -5,3 +5,4 @@ const ramenMakingImg = document.getElementById('ramenMaking')
 ramenMakingImg.src = ramenMaking;
 
 alert("This is index.js");
+console.log(1);
