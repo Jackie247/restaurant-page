@@ -1,8 +1,4 @@
 import './styles/main.scss';
-import ramenMaking from './assets/ramenMaking.jpg'
+import createWebsite from './website.js'
 
-const ramenMakingImg = document.getElementById('ramenMaking')
-ramenMakingImg.src = ramenMaking;
-
-alert("This is index.js");
-console.log(1);
+createWebsite();
