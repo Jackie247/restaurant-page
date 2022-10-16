@@ -1,3 +1,5 @@
+import createHomePage from './homepage.js';
+
 function createHeader(){
     // document elements
     const header = document.createElement('header');
@@ -33,10 +35,10 @@ function createNav(){
 
     dropdown.addEventListener('click', () => {
         var x = document.getElementById("myLinks");
-        if (x.style.display === "flex") {
+        if (x.style.display === "block") {
             x.style.display = "none";
         } else {
-            x.style.display = "flex";
+            x.style.display = "block";
         }
     })
     homePage.textContent = 'Home';
@@ -104,4 +106,6 @@ export default function createWebsite(){
     content.appendChild(header);
     content.appendChild(createMain());
     content.appendChild(createFooter());
-}
+
+    createHomePage();
+}   

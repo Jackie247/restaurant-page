@@ -20,9 +20,15 @@ table {
 }
 // Base Styles //
 @font-face{
-	font-family: ""
+	font-family: "NotoSansJP";
+	src: url("../assets/NotoSansJP-Light.otf") format("otf");
+	font-style:normal;
 }
-
+@font-face{
+	font-family: 'Osake';
+	src: url('../assets/Osake-x3oqj.otf') format('otf');
+	font-style:normal;
+}
 @mixin flexCenterRow(){
 	display:flex;
 	flex-flow: row;
@@ -32,6 +38,9 @@ table {
 :root{	
 	--headerBg: rgba(56,56,56,1);
 	--navBg: rgba(96,96,96,0.5);
+}
+.content{
+	min-height:100vh;
 }
 header{
 	.header-strip-container{
@@ -43,10 +52,10 @@ header{
 			font-size:30px;
 			color:white;
 			height:100%;
+			font-family: 'Osake';
 		}
 		.topnav{
-			overflow: hidden;
-			font-family: Arial;
+			display:block;
 			/* Hide the links inside the navigation menu (except for logo/home) */
 			#myLinks {
 				display: none;
@@ -78,7 +87,35 @@ header{
 	}
 }
 main{
-	min-height:100%;
+	.main-content{
+		display:flex;
+		flex-flow:column;
+		.hero{
+			position:relative;
+			.hero-image{
+				top:0;
+				height:auto;
+				width:100vw;
+			}
+			.hero-text{
+				font-family: 'NotoSansJP';
+				position:absolute;
+				top: calc(50% - 20px);
+				left:0;
+				text-align: center;
+				width:100%;
+				.hero-title{
+					color:white;
+				}
+				.hero-title-foods{
+					margin:2px;
+					font-size:16px;
+					color:white;
+				}
+			}
+		}
+	}
+
 }
 footer{
 	
