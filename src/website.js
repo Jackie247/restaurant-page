@@ -1,4 +1,6 @@
 import createHomePage from './homepage.js';
+import createMenuPage from './menu.js';
+import createContactPage from './contact.js';
 
 function createHeader(){
     // document elements
@@ -8,22 +10,39 @@ function createHeader(){
     header.classList.add('header');
     // append to element
     header.appendChild(nav);
-    
+
     return header;
 }
 function createNav(){
     // document elements
+    const main = document.getElementById('main');
     const nav = document.createElement('nav');
     const links = document.createElement('div');
-    const home = document.createElement('a');
-    const menu = document.createElement('a');
-    const contact = document.createElement('a');
+    const home = document.createElement('button');
+    const menu = document.createElement('button');
+    const contact = document.createElement('button');
     // CLASSES // 
     nav.classList.add('navbar');
     links.classList.add('nav-links')
     home.textContent = 'Home';
     menu.textContent = 'Menu';
     contact.textContent = 'Contact';
+
+    home.setAttribute('id','home-btn');
+    home.addEventListener('click',(e) => {
+        main.innerHTML = '';
+        createHomePage();
+    })
+    menu.setAttribute('id','menu-btn');
+    menu.addEventListener('click',(e) => {
+        main.innerHTML = '';
+        createHomePage();
+    })
+    contact.setAttribute('id','contact-btn');
+    contact.addEventListener('click',(e) => {
+        main.innerHTML = '';
+        createHomePage();
+    })
 
     links.appendChild(home);
     links.appendChild(menu);

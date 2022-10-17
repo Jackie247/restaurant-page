@@ -1,4 +1,4 @@
 import './styles/main.scss';
-import createWebsite from './website.js'
+import createWebsite from './website.js';
 
 createWebsite();

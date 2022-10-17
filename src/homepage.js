@@ -87,33 +87,42 @@ function createMid(){
 function createTestimonies(){
     const testimonies = document.createElement('div');
     const testimony1 = document.createElement('div');
+    const stars1 = createImage(stars,'five stars');
     const para1 = createParagraph(`"I dine in this restaurant quite often! 
     I visit this place regularly and love it everytime. 
     The meals are authentic and the price is not too expensive.
     I enjoy eating in this place and would recommend to anyone."`)
-    const review1 = document.createElement('p');
+    const review1 = createParagraph(`- Clark Kent Reviewed on Google`);
     const testimony2 = document.createElement('div');
+    const stars2 = createImage(stars,'five stars');
     const para2 = createParagraph(`"Authentic ramen from one of the best Japanese chefs in town!
     They also serve amazing Sushi dishes that melt in your mouth.
     The staff has always been friendly and the place has such a beautiful Japanese aesthetic."`)
-    const review2 = document.createElement('p');
+    const review2 = createParagraph(`- Barry Allen Reviewed on Google`);
     const testimony3 = document.createElement('div');
+    const stars3 = createImage(stars,'five stars');
     const para3 = createParagraph(`"I wholeheartedly recommend the Miso Ramen, such a classic ramen dish brought to an extraodinary level.
     Great work."`)
     const review3 = createParagraph(`- Bruce Wayne Reviewed on Google`);
 
     testimonies.classList.add('testimonies');
+    testimony1.classList.add('testimony');
     para1.classList.add('paragraph');
+    review1.classList.add('review');
+    testimony2.classList.add('testimony');
     para2.classList.add('paragraph');
+    review2.classList.add('review');
+    testimony3.classList.add('testimony');
     para3.classList.add('paragraph');
+    review3.classList.add('review');
 
-    review1.textContent = `- Clark Kent Reviewed on Google`
-    review2.textContent = `- Barry Allen Reviewed on Google`
-
+    testimony1.appendChild(stars1);
     testimony1.appendChild(para1);
     testimony1.appendChild(review1);
+    testimony2.appendChild(stars2);
     testimony2.appendChild(para2);
     testimony2.appendChild(review2);
+    testimony3.appendChild(stars3);
     testimony3.appendChild(para3);
     testimony3.appendChild(review3);
     testimonies.append(testimony1);

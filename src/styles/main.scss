@@ -67,13 +67,16 @@ header{
 			top:25%;
 			/* Links inside the navbar */
 			justify-content: space-evenly;
-			a {
+			button {
+				font-family: 'Spectral';
 				cursor:pointer;
 				color: white;
 				font-size: 24px;
 				text-decoration: none;
+				background-color:inherit;
+				border:none;
 			}
-			a:hover{
+			button:hover{
 				transform:scale(1.1);
 				text-decoration: underline;
 			}
@@ -93,18 +96,21 @@ main{
 				width:100vw;
 			}
 			.hero-text{
-				font-family:'EagleLake';
+				font-family:'Spectral';
 				position:absolute;
-				top: calc(50% - 20px);
+				top: calc(50% - 40px);
 				left:0;
 				text-align: center;
 				width:100%;
+				font-weight:bolder;
 				.hero-title{
+					font-size:30px;
 					color:white;
 				}
 				.hero-title-foods{
-					margin:2px;
-					font-size:16px;
+					margin-top:1em;
+					font-size:13px;
+					font-style:italic;
 					color:white;
 				}
 			}
@@ -125,18 +131,45 @@ main{
 		.gallery{
 			display:grid;
 			p{
-				padding:0 3rem;
-				text-align: left;
+				font-size:18px;
+				text-align: center;
+				padding:2rem;
+				margin:0;
 			}
 			img{
 				max-height:100%;
 				max-width:100%;
+				box-shadow: 0px 0px 10px 1px black;
+			}
+		}
+	}
+	.testimonies{
+		margin:1em 0;
+		padding:1em 0;
+		border-top: solid 2px black;
+		border-bottom: solid 2px black;
+		display:flex;
+		flex-flow:column;
+		.testimony{
+			display:flex;
+			flex-flow:column;
+			align-items:center;
+			justify-content: center;
+			p{
+				padding:0 2em;
+			}
+			.review{
+				margin-top:0;
 			}
 		}
 	}
 }
 footer{
-	
+	height:50px;
+	@include flexCenterRow();
+	h4{
+		margin:0;
+	}
 }
 // small table styles //
 @media screen and (min-width:620px){
