@@ -61,19 +61,27 @@ function createMid(){
     welcome.classList.add('welcome');
     welcomeJap.classList.add('welcome-japanese');
     gallery.classList.add('gallery');
+    
+    firstImage.classList.add('grid-item');
+    firstImageText.classList.add('grid-item');
+    secondImage.classList.add('grid-item');
+    secondImageText.classList.add('grid-item');
+    thirdImage.classList.add('grid-item');
+    thirdImageText.classList.add('grid-item');
 
     titleContainer.appendChild(welcome);
     titleContainer.appendChild(welcomeJap);
     content.appendChild(titleContainer);
 
     content.appendChild(gallery);
-    
+
     gallery.appendChild(firstImage);
     gallery.appendChild(firstImageText);
     gallery.appendChild(secondImage);
     gallery.appendChild(secondImageText);
     gallery.appendChild(thirdImage);
     gallery.appendChild(thirdImageText);
+
 
     return content;
 }
