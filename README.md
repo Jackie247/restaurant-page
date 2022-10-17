@@ -5,6 +5,7 @@ First project created while utilizing webpack for the development environment. C
 Entire contents of the website is generated using JavaScript alone.
 
 Webpack Usage:
+
     - Assets dynamically loaded using webpack.
 
     - HtmlWebpackPlugin in order to automatically handle the index.html file using a template file.
