@@ -41,15 +41,17 @@ function createHero(){
 }
 
 function createMid(){
+    // This function creates a div that contains all the main elements of the homepage,
+    // The div is given a class 'main-content-mid' and this is appended to the main element
     const content = document.createElement('div');
     const titleContainer = document.createElement('div');
     const welcome = document.createElement('h2');
     const welcomeJap = document.createElement('h4');
     const gallery = document.createElement('div');
     const firstImage = createImage(gallery1,'chefs cooking in the kitchen');
-    const firstImageText = createParagraph('Taste authentic ramen created by chefs who honed their techniques across restaurants in Japan');
+    const firstImageText = createParagraph('Taste authentic ramen created by chefs who have honed their techniques across restaurants in Japan. Our team of chefs use the freshest ingredients sourced from local farmers and crafted into the perfect bowl of ramen!');
     const secondImage = createImage(gallery2,'bowl of ramen');
-    const secondImageText = createParagraph('Taste authentic ramen created by chefs who honed their techniques across restaurants in Japan');
+    const secondImageText = createParagraph('Taste authentic ramen created by chefs who honed their techniques across restaurants in Japan.');
     const thirdImage = createImage(gallery3);
     const thirdImageText = createParagraph('Taste authentic ramen ');
 
@@ -61,7 +63,6 @@ function createMid(){
     welcome.classList.add('welcome');
     welcomeJap.classList.add('welcome-japanese');
     gallery.classList.add('gallery');
-    
     firstImage.classList.add('grid-item');
     firstImageText.classList.add('grid-item');
     secondImage.classList.add('grid-item');
@@ -72,9 +73,7 @@ function createMid(){
     titleContainer.appendChild(welcome);
     titleContainer.appendChild(welcomeJap);
     content.appendChild(titleContainer);
-
     content.appendChild(gallery);
-
     gallery.appendChild(firstImage);
     gallery.appendChild(firstImageText);
     gallery.appendChild(secondImage);
@@ -82,12 +81,50 @@ function createMid(){
     gallery.appendChild(thirdImage);
     gallery.appendChild(thirdImageText);
 
-
     return content;
 }
 
+function createTestimonies(){
+    const testimonies = document.createElement('div');
+    const testimony1 = document.createElement('div');
+    const para1 = createParagraph(`"I dine in this restaurant quite often! 
+    I visit this place regularly and love it everytime. 
+    The meals are authentic and the price is not too expensive.
+    I enjoy eating in this place and would recommend to anyone."`)
+    const review1 = document.createElement('p');
+    const testimony2 = document.createElement('div');
+    const para2 = createParagraph(`"Authentic ramen from one of the best Japanese chefs in town!
+    They also serve amazing Sushi dishes that melt in your mouth.
+    The staff has always been friendly and the place has such a beautiful Japanese aesthetic."`)
+    const review2 = document.createElement('p');
+    const testimony3 = document.createElement('div');
+    const para3 = createParagraph(`"I wholeheartedly recommend the Miso Ramen, such a classic ramen dish brought to an extraodinary level.
+    Great work."`)
+    const review3 = createParagraph(`- Bruce Wayne Reviewed on Google`);
+
+    testimonies.classList.add('testimonies');
+    para1.classList.add('paragraph');
+    para2.classList.add('paragraph');
+    para3.classList.add('paragraph');
+
+    review1.textContent = `- Clark Kent Reviewed on Google`
+    review2.textContent = `- Barry Allen Reviewed on Google`
+
+    testimony1.appendChild(para1);
+    testimony1.appendChild(review1);
+    testimony2.appendChild(para2);
+    testimony2.appendChild(review2);
+    testimony3.appendChild(para3);
+    testimony3.appendChild(review3);
+    testimonies.append(testimony1);
+    testimonies.append(testimony2);
+    testimonies.append(testimony3);
+
+    return testimonies;
+}
 export default function createHomePage(){
     const main = document.getElementById('main');
     main.appendChild(createHero());
     main.appendChild(createMid());
+    main.appendChild(createTestimonies());
 }

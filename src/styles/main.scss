@@ -1,9 +1,32 @@
+@font-face{
+	src: url("../assets/NotoSansJP-Light.otf");
+	font-family: "NotoSansJP";
+	font-weight: normal;
+	font-style:normal;
+}
+@font-face{
+	src:url("../assets/SpectralSC-ExtraLight.ttf");
+	font-family: 'Spectral';
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face{
+	src: url('../assets/Osake-x3oqj.otf');
+	font-family: 'Osake';
+	font-style:normal;
+	font-weight: normal;
+}
+@font-face{
+	src: url("../assets/EagleLake-Regular.ttf");
+	font-family: 'EagleLake';
+	font-weight: normal;
+    font-style: normal;
+}
 body{
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -13,22 +36,13 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: var(--mainBg);
 }
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 // Base Styles //
-@font-face{
-	font-family: "NotoSansJP";
-	src: url("../assets/NotoSansJP-Light.otf") format("otf");
-	font-style:normal;
-}
-@font-face{
-	font-family: 'Osake';
-	src: url('../assets/Osake-x3oqj.otf') format('otf');
-	font-style:normal;
-}
 @mixin flexCenterRow(){
 	display:flex;
 	flex-flow: row;
@@ -38,6 +52,7 @@ table {
 :root{	
 	--headerBg: rgba(56,56,56,1);
 	--navBg: rgba(96,96,96,0.5);
+	--mainBg: #e5e5e5;
 }
 .content{
 	min-height:100vh;
@@ -52,10 +67,11 @@ header{
 			font-size:30px;
 			color:white;
 			height:100%;
-			font-family: 'Osake';
+			font-family: 'EagleLake';
 		}
 		.topnav{
-			display:block;
+			overflow:hidden;
+			position:relative;
 			/* Hide the links inside the navigation menu (except for logo/home) */
 			#myLinks {
 				display: none;
@@ -69,24 +85,26 @@ header{
 					text-decoration: none;
 					padding: 20px 16px;
 				}
-			}
-			/* Style the hamburger menu */
-			.icon {
-				color: white;
-				display: block;
-				position: absolute;
-				right: 15px;
-				top: 15px;
-				font-size:30px;
-				border:none;
-				a:hover {
-					cursor:pointer;
+				/* Style the hamburger menu */
+				.icon {
+					color: white;
+					display: block;
+					position: absolute;
+					right: 15px;
+					top: 15px;
+					font-size:30px;
+					border:none;
+					a:hover {
+						cursor:pointer;
+					}
 				}
 			}
+
 		}
 	}
 }
 main{
+	font-family:'NotoSansJP';
 	.main-content-hero{
 		display:flex;
 		flex-flow:column;
@@ -98,7 +116,7 @@ main{
 				width:100vw;
 			}
 			.hero-text{
-				font-family: 'NotoSansJP';
+				font-family:'EagleLake';
 				position:absolute;
 				top: calc(50% - 20px);
 				left:0;
@@ -116,21 +134,22 @@ main{
 		}
 	}
 	.main-content-mid{
+		font-family: 'Spectral';
 		.mid-section-title{
 			display:flex;
 			flex-flow:column;
 			align-items: center;
-			font-family: 'NotoSansJP';
+			font-family:'EagleLake';
 			margin:1em;
 			.welcome-japanese{
-				margin:0;
+				margin-top:0;
 			}
 		}
 		.gallery{
 			display:grid;
 			p{
-				padding:0 1rem;
-				text-align: center;
+				padding:0 3rem;
+				text-align: left;
 			}
 			img{
 				max-height:100%;

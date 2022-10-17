@@ -65,38 +65,10 @@ function createMain(){
 
 function createFooter(){
     const footer = document.createElement('footer');
-    const testimonies = document.createElement('div');
-    const para1 = document.createElement('h5');
-    const review1 = document.createElement('p');
-    const para2 = document.createElement('h5');
-    const review2 = document.createElement('p');
-    const para3 = document.createElement('h5');
-    const review3 = document.createElement('p');
-
-    footer.classList.add('footer');
-    testimonies.classList.add('testimonies');
-    para1.classList.add('paragraph');
-    para2.classList.add('paragraph');
-    para3.classList.add('paragraph');
-
-    para1.textContent = `"I dine in this restaurant quite often! 
-    I visit this place regularly and love it everytime. 
-    The meals are authentic and the price is not too expensive.
-    I enjoy eating in this place and would recommend to anyone."`;
-    review1.textContent = `-Clark Kent Reviewed on Google`
-    para2.textContent = `"Authentic ramen from one of the best Japanese chefs in town!
-    They also serve amazing Sushi dishes that melt in your mouth.
-    The staff has always been friendly and the place has such a beautiful Japanese aesthetic."`
-    review2.textContent = `-Barry Allen Reviewed on Google`
-    para3.textContent = `"I wholeheartedly recommend the Miso Ramen, such a classic ramen dish brought to an extraodinary level.
-    Great work."`
-    review3.textContent = `-Bruce Wayne Reviewed on Google`
-
-    testimonies.append(para1);
-    testimonies.append(para2);
-    testimonies.append(para3);
-    footer.appendChild(testimonies); 
-
+    const text = document.createElement('h4');
+    text.textContent = 'Created by Jackie247';
+    footer.appendChild(text);
+    
     return footer;
 }
 
