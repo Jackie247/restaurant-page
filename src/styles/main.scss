@@ -87,7 +87,7 @@ header{
 	}
 }
 main{
-	.main-content{
+	.main-content-hero{
 		display:flex;
 		flex-flow:column;
 		.hero{
@@ -115,15 +115,47 @@ main{
 			}
 		}
 	}
-
+	.main-content-mid{
+		.mid-section-title{
+			display:flex;
+			flex-flow:column;
+			align-items: center;
+			font-family: 'NotoSansJP';
+			margin:1em;
+			.welcome-japanese{
+				margin:0;
+			}
+		}
+		.gallery{
+			display:grid;
+			p{
+				padding:0 1rem;
+				text-align: center;
+			}
+			img{
+				max-height:100%;
+				max-width:100%;
+			}
+		}
+	}
 }
 footer{
 	
 }
 // small table styles //
 @media screen and (min-width:620px){
-
+	.main-content-mid{
+		.gallery{
+			display:grid;
+			grid-template-columns: 1fr 1fr;
+			.grid-item:nth-child(3){
+				grid-row:2/3;
+				grid-column: 2/3;
+			}
+		}
+	}
 }
+
 @media screen and (min-width:960px){
 
 }
