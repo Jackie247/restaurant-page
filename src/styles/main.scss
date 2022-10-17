@@ -58,48 +58,25 @@ table {
 	min-height:100vh;
 }
 header{
-	.header-strip-container{
+	.navbar{
 		height:60px;
 		background-color:var(--headerBg);
-		h1{
+		.nav-links{
 			@include flexCenterRow();
-			margin:0;
-			font-size:30px;
-			color:white;
-			height:100%;
-			font-family: 'EagleLake';
-		}
-		.topnav{
-			overflow:hidden;
 			position:relative;
-			/* Hide the links inside the navigation menu (except for logo/home) */
-			#myLinks {
-				display: none;
-				background-color:var(--navBg);
-				justify-content: center;
-				/* Links inside the navbar */
-				a {
-					color: white;
-					font-size: 24px;
-					text-align: center;
-					text-decoration: none;
-					padding: 20px 16px;
-				}
-				/* Style the hamburger menu */
-				.icon {
-					color: white;
-					display: block;
-					position: absolute;
-					right: 15px;
-					top: 15px;
-					font-size:30px;
-					border:none;
-					a:hover {
-						cursor:pointer;
-					}
-				}
+			top:25%;
+			/* Links inside the navbar */
+			justify-content: space-evenly;
+			a {
+				cursor:pointer;
+				color: white;
+				font-size: 24px;
+				text-decoration: none;
 			}
-
+			a:hover{
+				transform:scale(1.1);
+				text-decoration: underline;
+			}
 		}
 	}
 }
