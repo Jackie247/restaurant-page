@@ -1,6 +1,7 @@
 import createHomePage from './homepage.js';
 import createMenuPage from './menu.js';
 import createContactPage from './contact.js';
+import {removeAllChildNodes} from './elements.js';
 
 function createHeader(){
     // document elements
@@ -15,7 +16,6 @@ function createHeader(){
 }
 function createNav(){
     // document elements
-    const main = document.getElementById('main');
     const nav = document.createElement('nav');
     const links = document.createElement('div');
     const home = document.createElement('button');
@@ -29,18 +29,18 @@ function createNav(){
     contact.textContent = 'Contact';
 
     home.setAttribute('id','home-btn');
-    home.addEventListener('click',(e) => {
+    home.addEventListener('click',() => {
         main.innerHTML = '';
         createHomePage();
     })
     menu.setAttribute('id','menu-btn');
-    menu.addEventListener('click',(e) => {
+    menu.addEventListener('click',() => {
         main.innerHTML = '';
-        createHomePage();
+        createMenuPage();
     })
     contact.setAttribute('id','contact-btn');
-    contact.addEventListener('click',(e) => {
-        main.innerHTML = '';
+    contact.addEventListener('click',() => {
+        main.textContent = '';
         createHomePage();
     })
 
