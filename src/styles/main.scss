@@ -66,7 +66,7 @@ header{
 			position:relative;
 			top:25%;
 			/* Links inside the navbar */
-			justify-content: space-evenly;
+			justify-content: center;
 			button {
 				font-family: 'Spectral';
 				cursor:pointer;
@@ -85,6 +85,7 @@ header{
 }
 main{
 	font-family:'NotoSansJP';
+	// Homepage //
 	.main-content-hero{
 		display:flex;
 		flex-flow:column;
@@ -93,7 +94,7 @@ main{
 			.hero-image{
 				top:0;
 				height:auto;
-				width:100vw;
+				width:100%;
 			}
 			.hero-text{
 				font-family:'Spectral';
@@ -160,6 +161,34 @@ main{
 			}
 			.review{
 				margin-top:0;
+			}
+		}
+	}
+	// Menu Page //
+	.main-content{
+		font-family:'Spectral';
+		display:flex;
+		flex-flow:column;
+		align-items: center;
+		height:100%;
+		h1{
+			margin-bottom:0;
+		}
+		.menu{
+			border-top:2px solid black;
+			border-bottom:2px solid black;
+			padding: 1em 0;
+			padding-bottom:3em;
+			width:100%;
+			display:flex;
+			flex-flow:column;
+			.menu-block{
+				padding:0 2em;
+				.menu-item{
+					width:100%;
+					font-size:16px;
+					margin-bottom:0;
+				}
 			}
 		}
 	}
