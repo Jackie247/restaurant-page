@@ -15,3 +15,5 @@ Webpack Usage:
     - Development Server to automatically update the page.
 
     - Includes babel package in order to be backwards compatible with older browsers.
+    
+    - Code splitting using lodash to generate multiple minimized and uglified JS modules.
