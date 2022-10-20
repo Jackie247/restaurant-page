@@ -49,37 +49,54 @@ function createMid(){
     const welcomeJap = document.createElement('h4');
     const gallery = document.createElement('div');
     const firstImage = createImage(gallery1,'chefs cooking in the kitchen');
-    const firstImageText = createParagraph('Taste authentic ramen created by chefs who have honed their techniques across restaurants in Japan. Our team of chefs use the freshest ingredients sourced from local farmers and crafted into the perfect bowl of ramen!');
+    const firstImageTextContainer = document.createElement('div');
+    const firstImageTitle = document.createElement('h3');
+    const firstImageText = createParagraph('At Bonzai you will taste authentic ramen created by chefs who have honed their techniques across restaurants in Japan. Our team of chefs use the freshest ingredients sourced from local farmers and crafted into the perfect bowl of ramen!');
+    const secondImageTextContainer = document.createElement('div');
+    const secondImageTitle = document.createElement('h3');
     const secondImage = createImage(gallery2,'bowl of ramen');
-    const secondImageText = createParagraph('Taste authentic ramen created by chefs who honed their techniques across restaurants in Japan.');
+    const secondImageText = createParagraph('Taste authentic ramen created by chefs who honed their techniques across restaurants in Japan. The cuisine served at Bonzai is a traditional kaiseki prepared by chef Hiroshi Hashimoto. He has been trained at Kikunoi and his proven cooking techniques have been appreciated by many customers. His cuisine is based on dashi and the flavours of the seasonal ingredients themselves.');
+    const thirdImageTextContainer = document.createElement('div');
+    const thirdImageTitle = document.createElement('h3');
     const thirdImage = createImage(gallery3);
-    const thirdImageText = createParagraph('Taste authentic ramen ');
+    const thirdImageText = createParagraph('The interior of Roketsu has been specially designed and built by the craftsmen of Nakamura Sotoji Komuten using Japanese hinoki wood, preserved over 100 years in Kyoto.');
+    const thirdImageTextTwo = createParagraph('The interior has been made in Kyoto and shipped to London, and assembled by the craftsmen from Nakamura Sotoji Komuten, one of the world\'s leading experts in the Sukiya style.This project started with a desire to follow in the footsteps of our predecessors and to spread the still developing category of Japanese food culture, kaiseki, to the world.')
 
     welcome.textContent = 'Welcome!';
     welcomeJap.textContent = '私たちのサイトに、ようこそ！'
-
+    firstImageTitle.textContent = 'Why Bonzai?';
+    secondImageTitle.textContent = 'Our food';
+    thirdImageTitle.textContent = 'About Bonzai';
     content.classList.add('main-content-mid')
     titleContainer.classList.add('mid-section-title');
     welcome.classList.add('welcome');
     welcomeJap.classList.add('welcome-japanese');
     gallery.classList.add('gallery');
-    firstImage.classList.add('grid-item');
-    firstImageText.classList.add('grid-item');
-    secondImage.classList.add('grid-item');
-    secondImageText.classList.add('grid-item');
-    thirdImage.classList.add('grid-item');
-    thirdImageText.classList.add('grid-item');
+    firstImage.classList.add('grid-item')
+    firstImageTextContainer.classList.add('grid-item');
+    secondImage.classList.add('grid-item')
+    secondImageTextContainer.classList.add('grid-item');
+    thirdImage.classList.add('grid-item')
+    thirdImageTextContainer.classList.add('grid-item');
 
+    firstImageTextContainer.appendChild(firstImageTitle);
+    firstImageTextContainer.appendChild(firstImageText);
+    secondImageTextContainer.appendChild(secondImageTitle);
+    secondImageTextContainer.appendChild(secondImageText);
+    thirdImageTextContainer.appendChild(thirdImageTitle);
+    thirdImageTextContainer.appendChild(thirdImageText);
+    thirdImageTextContainer.appendChild(thirdImageTextTwo);
+    
     titleContainer.appendChild(welcome);
     titleContainer.appendChild(welcomeJap);
     content.appendChild(titleContainer);
     content.appendChild(gallery);
     gallery.appendChild(firstImage);
-    gallery.appendChild(firstImageText);
+    gallery.appendChild(firstImageTextContainer);
     gallery.appendChild(secondImage);
-    gallery.appendChild(secondImageText);
+    gallery.appendChild(secondImageTextContainer);
     gallery.appendChild(thirdImage);
-    gallery.appendChild(thirdImageText);
+    gallery.appendChild(thirdImageTextContainer);
 
     return content;
 }

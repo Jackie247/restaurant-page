@@ -2,9 +2,14 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: {
-    bundle: path.resolve(__dirname,'./src/index.js')
+    index: {import: './src/index.js', dependOn:'shared'},
+    homepage: {import: './src/homepage.js', dependOn:'shared'},
+    menu:{import: './src/menu.js',dependOn:'shared'},
+    contact:{import:'./src/contact.js',dependOn:'shared'},
+    website:{import:'./src/website.js',dependOn:'shared'},
+    shared:'lodash'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -48,6 +53,11 @@ module.exports = {
         }
       }
     ],
+  },
+  optimization:{
+    splitChunks:{
+      chunks:'all'
+    }
   },
   plugins:[
     new HtmlWebpackPlugin({
