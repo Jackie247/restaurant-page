@@ -41,7 +41,7 @@ function createNav(){
     contact.setAttribute('id','contact-btn');
     contact.addEventListener('click',() => {
         main.textContent = '';
-        createHomePage();
+        createContactPage();
     })
 
     links.appendChild(home);

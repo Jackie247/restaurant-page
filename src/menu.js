@@ -1,4 +1,5 @@
 import {createImage,createParagraph} from './elements.js';
+
 function createMenu(){
     const content = document.createElement('div');
     const menu = document.createElement('div');

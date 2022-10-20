@@ -1,5 +1,5 @@
 import {createImage,createParagraph} from './elements.js';
-import map from './assets/map.jpg';
+import map from './assets/map.JPG';
 
 function createContactContent(){
     const content = document.createElement('div');

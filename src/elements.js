@@ -12,3 +12,8 @@ export function createParagraph(text){
     return paragraph
 }
 
+export function removeAllChildNodes(parent){
+    while(parent.firstChild){
+        parent.removeChild(parent.firstChild);
+    }
+}
