@@ -1,5 +1,7 @@
 # Restaurant Page Website 
 
+Live preview: [Page Site](https://jackie247.github.io/restaurant-page/)
+
 First project created while utilizing webpack for the development environment. Continues with JS DOM manipulation by dynamically rendering a simple restaurant homepage. 
 
 Entire contents of the website is generated using JavaScript alone.
