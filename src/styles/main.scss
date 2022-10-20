@@ -391,26 +391,26 @@ footer{
 				.grid-item{
 
 					h3{
-						font-size:3rem;
+						font-size:2rem;
 						margin-top:2em;
 						margin-bottom: 2em;
 					}
 					p{
 						padding-left:3em;
 						padding-right:3em;
-						font-size:2rem;
+						font-size:25px;
 						padding-bottom:0;
 					}
 				}
 				.grid-item:nth-child(1){
 					p{
-						font-size:3rem;
+						font-size:25px;
 						margin-bottom:1em;
 					}
 				}
 				.grid-item:nth-child(6){
 					p{
-						font-size:2rem;
+						font-size:23px;
 						margin-bottom:1em;
 					}
 				}
@@ -448,6 +448,40 @@ footer{
 			width:50%;
 			font-size:1.25em;
 			.map-container{
+			}
+		}
+	}
+}
+@media screen and (min-width:1800px){
+	main{
+		// Homepage //
+		.main-content-mid{
+			.gallery{
+				.grid-item{
+					h3{
+						font-size:3rem;
+						margin-top:2em;
+						margin-bottom: 2em;
+					}
+					p{
+						padding-left:3em;
+						padding-right:3em;
+						font-size:30px;
+						padding-bottom:0;
+					}
+				}
+				.grid-item:nth-child(1){
+					p{
+						font-size:30px;
+						margin-bottom:1em;
+					}
+				}
+				.grid-item:nth-child(6){
+					p{
+						font-size:28px;
+						margin-bottom:1em;
+					}
+				}
 			}
 		}
 	}
