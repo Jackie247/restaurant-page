@@ -107,7 +107,6 @@ main{
 		}
 	}
 	.main-content-mid{
-		font-family: 'Spectral';
 		.mid-section-title{
 			display:flex;
 			flex-flow:column;
@@ -125,6 +124,7 @@ main{
 				flex-flow:column;
 				align-items: center;
 				h3{
+					font-family: 'Spectral';
 					margin-bottom:0;
 				}
 				p{
