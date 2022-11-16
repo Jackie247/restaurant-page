@@ -55,11 +55,11 @@ function createMid(){
     const secondImageTextContainer = document.createElement('div');
     const secondImageTitle = document.createElement('h3');
     const secondImage = createImage(gallery2,'bowl of ramen');
-    const secondImageText = createParagraph('Taste authentic ramen created by chefs who honed their techniques across restaurants in Japan. The cuisine served at Bonzai is a traditional kaiseki prepared by chef Hiroshi Hashimoto. He has been trained at Kikunoi and his proven cooking techniques have been appreciated by many customers. His cuisine is based on dashi and the flavours of the seasonal ingredients themselves.');
+    const secondImageText = createParagraph('The cuisine served at Bonzai is a traditional kaiseki prepared by chef Hiroshi Hashimoto. He has been trained at Kikunoi and his proven cooking techniques have been appreciated by many customers. His cuisine is based on dashi and the flavours of the seasonal ingredients themselves.');
     const thirdImageTextContainer = document.createElement('div');
     const thirdImageTitle = document.createElement('h3');
     const thirdImage = createImage(gallery3);
-    const thirdImageText = createParagraph('The interior of Roketsu has been specially designed and built by the craftsmen of Nakamura Sotoji Komuten using Japanese hinoki wood, preserved over 100 years in Kyoto.');
+    const thirdImageText = createParagraph('Roketsu has been specially designed and built by the craftsmen of Nakamura Sotoji Komuten using Japanese hinoki wood, preserved over 100 years in Kyoto.');
     const thirdImageTextTwo = createParagraph('The interior has been made in Kyoto and shipped to London, and assembled by the craftsmen from Nakamura Sotoji Komuten, one of the world\'s leading experts in the Sukiya style.This project started with a desire to follow in the footsteps of our predecessors and to spread the still developing category of Japanese food culture, kaiseki, to the world.')
 
     welcome.textContent = 'Welcome!';
