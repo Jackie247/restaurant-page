@@ -1,19 +1,19 @@
-export function createImage(src,alt){
-    const image = document.createElement('img');
-    image.src = src; 
-    image.alt = alt;
+export function createImage(src, alt) {
+  const image = document.createElement("img");
+  image.src = src;
+  image.alt = alt;
 
-    return image;
+  return image;
 }
 
-export function createParagraph(text){
-    const paragraph = document.createElement('p');
-    paragraph.textContent = text;
-    return paragraph
+export function createParagraph(text) {
+  const paragraph = document.createElement("p");
+  paragraph.textContent = text;
+  return paragraph;
 }
 
-export function removeAllChildNodes(parent){
-    while(parent.firstChild){
-        parent.removeChild(parent.firstChild);
-    }
+export function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
 }
